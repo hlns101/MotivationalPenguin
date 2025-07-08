@@ -7,7 +7,6 @@ https://www.geeksforgeeks.org/python/python-tkinter-tutorial/
 
 '''
 
-
 import tkinter as tk
 
 from random import randint
@@ -51,7 +50,7 @@ class MyApp(tk.Frame):
 
         def button_clicked():
             quote_num = get_random_quote()
-            text_var.set(quotes[quote_num-1])
+            text_var.set(quotes[quote_num - 1])
             label.config(textvariable=text_var)
 
         button = tk.Button(root, text='Click here!',
@@ -64,6 +63,7 @@ class MyApp(tk.Frame):
                            command=button_clicked,
                            )
         button.pack(padx=0, pady=25)
+
     def _get_frames(self, img):
         with Image.open(img) as gif:
             index = 0
@@ -98,7 +98,8 @@ class MyApp(tk.Frame):
             image=frame
         )
 
-root=tk.Tk()
+
+root = tk.Tk()
 root.title('Motivational Penguin')
 root.geometry('600x500')
 root.resizable(width=False, height=False)
@@ -125,9 +126,11 @@ quotes = ["Keep the beat going!",
           "Work hard in silence, let your success be the noise.",
           "Hard work beats talent when talent doesnt work hard",
           "I believe a miracle will happen and a chance will come",
-          "The best views comes from the hardest climbs",
+          "The best views come from the hardest climbs",
           "Dont struggle alone anymore",
-          "Remember, you deserve to be here."
+          "Remember, you deserve to be here.",
+          "Slow and steady wins the race",
+          "Continue moving forward, slowly but surely."
 
           ]
 
